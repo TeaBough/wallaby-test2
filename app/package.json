@@ -1,0 +1,74 @@
+{
+  "name": "@t/app",
+  "private": true,
+  "version": "1.0.0",
+  "description": "W",
+  "repository": {
+    "type": "git"
+  },
+  "engines": {
+    "node": "~20",
+    "pnpm": "8"
+  },
+  "author": "Thibault Vigouroux",
+  "scripts": {
+    "build:vite": "vite build",
+    "build:vite:local": "DISABLED_SENTRY=true NODE_ENV=development vite build --mode development",
+    "build:vite:recette": "NODE_ENV=production vite build --mode recette",
+    "build:vite:prod": "NODE_ENV=production vite build --mode production",
+    "preview": "vite preview --port 9003",
+    "dev": "vite",
+    "build:clean": "rimraf ./build",
+    "lint:fix": "TIMING=1 eslint --cache . --ext .jsx,.js,.ts,.tsx --quiet --fix",
+    "lint:check": "TIMING=1 eslint --cache . --ext .jsx,.js,.ts,.tsx",
+    "typecheck": "tsc",
+    "test": "cross-env NODE_ENV=test vitest",
+    "test:watch": "cross-env NODE_ENV=test vitest --watchAll",
+    "prettify": "prettier --write"
+  },
+  "dependencies": {
+    "js-cookie": "^3.0.5",
+    "lodash-es": "4.17.21",
+    "match-sorter": "^6.3.1",
+    "nanoid": "^4.0.2",
+    "polished": "^4.1.2",
+    "posthog-js": "^1.75.3",
+    "qs": "^6.11.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@emotion/babel-plugin": "^11.11.0",
+    "@emotion/babel-plugin-jsx-pragmatic": "^0.2.1",
+    "@playwright/test": "^1.33.0",
+    "@popperjs/core": "^2.11.7",
+    "@remix-run/web-fetch": "^4.3.4",
+    "@types/react-dom": "18.2.4",
+    "@vitejs/plugin-react": "^4.1.0",
+    "@vitest/ui": "^0.34.6",
+    "cross-env": "^7.0.3",
+    "dns": "^0.2.2",
+    "dotenv": "^16.0.3",
+    "esm": "3.2.25",
+    "intersection-observer": "^0.12.2",
+    "jsdom": "^22.0.0",
+    "lint-staged": "13.2.2",
+    "mailhog": "^4.16.0",
+    "minifaker": "^1.33.1",
+    "msw": "1.3.2",
+    "prettier": "^2.8.8",
+    "prop-types": "^15.8.1",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.4",
+    "utility-types": "^3.10.0",
+    "vite": "^4.4.11",
+    "vite-node": "^0.34.6",
+    "vite-plugin-pwa": "^0.16.5",
+    "vite-plugin-svgr": "^3.2.0",
+    "vite-tsconfig-paths": "^4.2.1",
+    "vitest": "^0.34.6"
+  },
+  "msw": {
+    "workerDirectory": "public"
+  }
+}

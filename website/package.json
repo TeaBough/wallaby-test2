@@ -1,0 +1,20 @@
+{
+  "name": "@t/website",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "test": "vitest",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^2.1.3"
+  },
+  "devDependencies": {
+    "vite": "^4.3.5",
+    "vitest": "^0.33.0"
+  }
+}
